@@ -1,0 +1,15 @@
+ 
+.search {
+    border: none;
+    border: solid 2px #120136;
+    justify-content: center;
+    width: 250px;
+    height: 50px;
+   margin: 15px;
+   padding: 15px;
+   color: grey;
+    font-family: "Press Start 2p",cursive;
+    border-radius: 5px;
+}
+
+    
