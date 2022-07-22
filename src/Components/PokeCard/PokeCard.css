@@ -12,8 +12,13 @@
     margin: 10px;
     width: 150px;
     flex-grow: 1;
+    font-family: "Press start 2P",cursive;
 }
 .pokecard:hover{
     transform: scale(1.05);
     box-shadow: rgba(0, 0, 0, 0.5);
+}
+.pokemon_sprite{
+    height: 85px;
+    width: 85px;
 }
