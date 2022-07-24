@@ -1,29 +1,34 @@
 import "./PokedexSearchResult.css";
 import React from "react";
+import { PokemonSchema } from "../../Types/PokemonSchema";
 
-
-const PokedexSearchResult = () => {
-  const   selectedPokemon = true;
-
+interface PokedexSearchResultProps {
+  selectedPokemon: PokemonSchema | undefined;
+}
+const PokedexSearchResult = ({ selectedPokemon }: PokedexSearchResultProps) => {
+  const { name, id, height, weight, base_experience, sprites } =
+    selectedPokemon || {};
 
   return (
-    <div className='poke_result_card'>
+    <div className="poke_result_card">
       {selectedPokemon ? (
-            <div>
-                {/*Add the image here */}
-                <p>Name:Pikachu</p>
-                <p>Id: Some Id </p>
-                <p>Height:some height </p>
-                <p>weight:some weight </p>
-                <p>Base exp:100 </p>
-            </div>
-
-        ):(
-            <h2>Welcome to the Pokedex</h2>
-        )
-      }
+        <div>
+          <img
+            className="pokemon_animated_sprite"
+            src={sprites?.animated || sprites?.normal}
+            alt="pokemon"
+          />
+          <p>name:{name}</p>
+          <p>Id: {id} </p>
+          <p>Height:{height} </p>
+          <p>weight:{weight} </p>
+          <p>Base exp:{base_experience} </p>
+        </div>
+      ) : (
+        <h2>Welcome to the Pokedex</h2>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default PokedexSearchResult;
