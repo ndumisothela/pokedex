@@ -1,12 +1,14 @@
-body{
-    background-color:#dbf6e9 ;
-    color: #162447;
+body {
+  background-color: #dbf6e9;
+  color: #0b0231;
+  background-image: url("./Components/Assets/wall.jpg");
 }
-.App{
-    text-align: center;
-   
+.App {
+  text-align: center;
 }
-.App h1{
-    font-size: 57px;
-    font-family:'Press Start 2P';
+.App h1 {
+  margin-top: 65px;
+  color: #dd3e0e;
+  font-size: 57px;
+  font-family: "Press Start 2P";
 }
